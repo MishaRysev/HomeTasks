@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Header.h"
+#include <rel.cpp>
 
 using namespace std;
 
@@ -9,7 +10,7 @@ int main() {
 
 	init(mas, count);
 	rep(mas, count);
-	out(mas, count);
+	print(mas, count);
 
 	return 0;
 }

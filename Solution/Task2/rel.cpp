@@ -19,7 +19,3 @@ void rep(float* mas, int n) {
 		mas[n/2 + i] = tmp;
 	}
 }
-
-void out(float* mas, int n) {
-	for (int i = 0; i < n; i++) cout << mas[i] << " ";
-}

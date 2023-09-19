@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Header.h"
+#include <rel.cpp>
 
 using namespace std;
 
@@ -7,7 +8,7 @@ int main() {
 	int* mas, * res;
 	int Mcount, Rcount = 0;
 
-	init(mas, Mcount);
+    init(mas, Mcount);
 	edit(mas, Mcount, res, Rcount);
 	print(res, Rcount);
 
