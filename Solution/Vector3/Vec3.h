@@ -9,7 +9,7 @@ private:
 	T z;
 public:
 	Vector3();
-	Vector3(T _x, T _y, T _z);
+	Vector3(const T& _x, const T& _y, const T& _z);
 	Vector3(const Vector3& vec);
 
 	friend std::istream& operator >> (std::istream& in, Vector3& vec) {
@@ -25,9 +25,9 @@ public:
 		return res;
 	}
 
-	float length();
+	float length() const;
 
-	Vector3<T>& operator = (const Vector3<T>& vec);
+	const Vector3<T>& operator = (const Vector3<T>& vec);
 	Vector3<T>& operator += (const Vector3<T>& vec);
 	Vector3<T>& operator -= (const Vector3<T>& vec);
 	Vector3<T>& operator *= (const T num);
@@ -42,7 +42,7 @@ public:
 };
 
 template<typename T>
-float Vector3<T>::length() {
+float Vector3<T>::length() const {
 	float res;
 	res = sqrtf(x * x + y * y + z * z);
 	return res;
@@ -56,7 +56,7 @@ Vector3<T>::Vector3(){
 }
 
 template<typename T>
-Vector3<T>::Vector3(T _x, T _y, T _z) {
+Vector3<T>::Vector3(const T& _x, const T& _y, const T& _z) {
 	x = _x;
 	y = _y;
 	z = _z;
@@ -70,7 +70,7 @@ Vector3<T>::Vector3(const Vector3& vec){
 }
 
 template<typename T>
-Vector3<T>& Vector3<T>::operator = (const Vector3<T>& vec) {
+const Vector3<T>& Vector3<T>::operator = (const Vector3<T>& vec) {
 	x = vec.x;
 	y = vec.y;
 	z = vec.z;

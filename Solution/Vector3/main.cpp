@@ -4,7 +4,7 @@
 using namespace std;
 
 int main() {
-	Vector3<int> a(1, 2, 3), b(3, 2, 1);
+	Vector3<int> a(1, 1, 1), b(0, 1, 1);
 	//test cos
 	float l = cos(a, b);
 	cout << l << "\n";
